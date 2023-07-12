@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crete Round', serif;
+}
+
+body{
+    width: 98%;
+    height: 100%;
+    
+    background-color: aqua;
+    background: url('../wallpaper/landing.jpg');
+    animation: slide 100s  infinite linear;
+}
+@keyframes slide {
+    0%{
+        background: url('../wallpaper/landing.jpg');
+        background-size: 99.8%;
+        background-repeat: no-repeat;
+    }
+    14.2%{
+       
+        
+        background: url('../wallpaper/landing1.jpg');
+        background-size: 99%;
+        background-repeat: no-repeat;
+        bottom: 100%;
+        top: 0px;
+    }
+    28%{
+        bottom: 80px;
+        background: url('../wallpaper/landing2.jpg');
+    }
+    42%{
+        background: url('../wallpaper/landing3.jpg');
+    }
+    56.2%{
+        background: url('../wallpaper/landing5.jpg');
+    }
+    70%{
+        background: url('../wallpaper/landing6.jpg');
+    }
+    84%{
+    background: url('../wallpaper/landing7.jpg');
+    background-size: 99.5%;
+    background-repeat: no-repeat;
+    }
+    100%{
+        background: url('../wallpaper/landng4.jpg');
+    }
+}
+/* Nav sec */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+#logo{
+    display: flex;
+   
+    justify-content: center;
+}
+#logo img{
+ width: 65px;
+ height: 65px;
+ padding: 1rem;
+ border-radius: 50%;
+}
+#menu{
+    padding: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+#logo2{
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+width: 40%;
+}
+#search{
+    width: 40%;
+    height: 20%;
+    text-decoration: none;
+}
+#login{
+    display: flex;
+    padding: 2rem;
+    list-style: none;
+}
+#login li:nth-child(1){
+    
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 2rem;
+    align-items: center;
+}
+#login li:nth-child(1):hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#login li:nth-child(2):hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#login li:nth-child(2){
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+}
+/* Home Section */
