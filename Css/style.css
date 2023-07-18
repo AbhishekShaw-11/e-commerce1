@@ -1,115 +1,115 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Crete Round', serif;
+    box-sizing: border-box;
 }
-
-body{
-    width: 98%;
-    height: 100%;
-    
-    background-color: aqua;
-    background: url('../wallpaper/landing.jpg');
-    animation: slide 100s  infinite linear;
-}
-@keyframes slide {
-    0%{
-        background: url('../wallpaper/landing.jpg');
-        background-size: 99.8%;
-        background-repeat: no-repeat;
-    }
-    14.2%{
-       
-        
-        background: url('../wallpaper/landing1.jpg');
-        background-size: 99%;
-        background-repeat: no-repeat;
-        bottom: 100%;
-        top: 0px;
-    }
-    28%{
-        bottom: 80px;
-        background: url('../wallpaper/landing2.jpg');
-    }
-    42%{
-        background: url('../wallpaper/landing3.jpg');
-    }
-    56.2%{
-        background: url('../wallpaper/landing5.jpg');
-    }
-    70%{
-        background: url('../wallpaper/landing6.jpg');
-    }
-    84%{
-    background: url('../wallpaper/landing7.jpg');
-    background-size: 99.5%;
-    background-repeat: no-repeat;
-    }
-    100%{
-        background: url('../wallpaper/landng4.jpg');
-    }
-}
-/* Nav sec */
-#nav{
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-#logo{
-    display: flex;
-   
-    justify-content: center;
-}
-#logo img{
- width: 65px;
- height: 65px;
- padding: 1rem;
- border-radius: 50%;
-}
-#menu{
-    padding: 2rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-
-}
-#logo2{
-display: flex;
-justify-content: space-around;
-align-items: center;
-
-width: 40%;
-}
-#search{
-    width: 40%;
-    height: 20%;
+a{
     text-decoration: none;
-}
-#login{
-    display: flex;
-    padding: 2rem;
     list-style: none;
+    color: rgb(15, 187, 235);
+    font-size:20px;
 }
-#login li:nth-child(1){
-    
-    padding-right: 1rem;
-    padding-left: 1rem;
-    border-radius: 2rem;
-    align-items: center;
+#search-bar{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 1.3rem;
+    width: 10rem;
+    text-align: center;
+
 }
-#login li:nth-child(1):hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-#login li:nth-child(2):hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+display: flex;
+justify-content: space-between;
+transition: 0.6s;
+
 }
 
-#login li:nth-child(2){
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 2rem;
+header .sticky{
+    padding: 5px 100px;
 }
-/* Home Section */
+
+.header1{
+    
+ display: flex;
+ align-items: center;
+ margin-left: 20px;
+ font-size: 25px ;
+ cursor: pointer;
+}
+.header2{
+    
+    display: flex;
+    align-items: center;
+    margin-left: -25%;
+}
+.header3{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 30%;
+    align-items: center;
+    cursor: pointer;
+}
+.header4{
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
+}
+.box {
+    /* margin-top: 2rem; */
+     width: 100vw;
+     height: 100vh;
+     background-position: center;
+     background-size: cover;
+     display: table;
+     background-attachment: fixed;
+ }
+ 
+ .box:nth-child(1) {
+     background-image: url("../wallpaper/landing.jpg");
+     background-position: relative;
+     background-size: cover;
+ }
+ 
+ .box:nth-child(2) {
+     background-image: url("../wallpaper/landing1.jpg");
+ 
+     background-size: cover;
+ }
+ 
+ .box:nth-child(3) {
+     background-image: url("../wallpaper/landing3.jpg");
+ 
+     background-size: cover;
+ }
+ 
+ .box:nth-child(4) {
+     background-image: url("../wallpaper/landng4.jpg");
+ 
+     background-size: cover;
+ }
+ 
+ .box:nth-child(5) {
+     background-image: url("../wallpaper/landing5.jpg");
+     background-position-y: top;
+ }
+ 
+ .box:nth-child(6) {
+     background-image: url("../wallpaper/landing6.jpg");
+     background-position-y: top;
+ 
+ }
+ 
+ .box:nth-child(7) {
+ 
+     background-image: url("../wallpaper/landing7.jpg");
+ 
+     background-position-y: top;
+ }
+ 
