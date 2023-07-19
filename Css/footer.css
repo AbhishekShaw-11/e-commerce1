@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  padding: 330px 0px 50px 0px;
+}
+.footer-col {
+  width: 15%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 19px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-weight: 500;
+  position: relative;
+}
+/* .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: yellowgreen;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+} */
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.footer-col ul li a {
+  font-size: 9px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: blueviolet;
+  text-decoration-line: underline;
+  padding-left: 5px;
+}
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+hr {
+  margin: 80%;
+  border: 0px;
+  border-bottom: 1px solid rgb(236, 222, 222);
+  margin: 100px auto;
+  padding: 50px 0px 0px 0px;
+}
+
+#div2 {
+  text-align: right;
+}
+.divfooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: black;
+  font-weight: 700;
+}
+#h {
+  color: rosybrown;
+  font-size: 9px;
+  font-weight: 700;
+}
+#footerdone {
+  padding: 100px 0px 100px 0px;
+  font-size: 9px;
+  color: black;
+  font-weight: 700;
+}
