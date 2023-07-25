@@ -122,9 +122,10 @@ header .sticky{
     transition: all 0.5s ease;
     margin-top: 108px;
     position: fixed;
-    width: 100%;
+    width: 20%;
     height: 100%;
-
+ background-color: azure;
+ color: black;
     visibility: hidden;
     opacity: 0;
     transition: 1.5s ease;

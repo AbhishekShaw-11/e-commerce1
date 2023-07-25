@@ -67,6 +67,92 @@
         <p>PRICE</p>
         <p>COLLECTION</p>
     </div>
+
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <a href="#" class="feat-btn">WOMEN</a>
+                <ul class="feat-show">
+                    <li><a href="womencart.html">NEW</a></li>
+                    <li><a href="womencart.html">Black dress collection</a></li>
+                    <li><a href="womencart.html">collection</a>
+                        <ul>
+
+                            <li><a href="womencart.html">partywear</a></li>
+                            <li><a href="womencart.html">coats</a></li>
+
+                            <li><a href="womencart.html">dress | jumpsuits</a></li>
+                            <li><a href="womencart.html">shirts</a></li>
+                            <li><a href="womencart.html">tops | overshirts</a></li>
+
+                            <li><a href="womencart.html">jackets | overshirts</a></li>
+                            <li><a href="womencart.html">jeans</a></li>
+                            <li><a href="womencart.html">t-shirts</a></li>
+                            <li><a href="womencart.html">skirts</a></li>
+                            <li><a href="womencart.html">suits</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- men section -->
+            <li>
+                <a href="#" class="serv-btn">MEN</a>
+                <ul class="serv-show">
+                    <li><a href="mencart.html">NEW</a></li>
+
+                    <li><a href="mencart.html">collection</a>
+                        <ul>
+                            <li><a href="mencart.html">GIFTS FOR HIMNEW</a></li>
+                            <li><a href="mencart.html">BEST SELLERSNEW</a></li>
+
+                            <li><a href="mencart.html">shirts</a></li>
+                            <li><a href="mencart.html">COATS | PARKAS</a></li>
+                            <li><a href="mencart.html">trousers</a></li>
+                            <li><a href="mencart.html">jackets | overshirts</a></li>
+                            <li><a href="mencart.html">JACKETS</a></li>
+                            <li><a href="mencart.html">OVERSHIRTS</a></li>
+
+                            <li><a href="mencart.html">suits</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">KIDS</a>
+                <ul class="serv-show">
+                    <li><a href="kidcart.html">NEW</a></li>
+
+                    <li><a href="kidcart.html">collection</a>
+                        <ul>
+                            <li><a href="kidcart.html">GIFTS FOR HIMNEW</a></li>
+                            <li><a href="kidcart.html">BEST SELLERSNEW</a></li>
+
+                            <li><a href="kidcart.html">shirts</a></li>
+                            <li><a href="kidcart.html">COATS | PARKAS</a></li>
+                            <li><a href="kidcart.html">trousers</a></li>
+                            <li><a href="kidcart.html">jackets | overshirts</a></li>
+                            <li><a href="kidcart.html">JACKETS</a></li>
+                            <li><a href="kidcart.html">OVERSHIRTS</a></li>
+
+                            <li><a href="kidcart.html">suits</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+            
+            </li>
+
+            <li><a href="#">SHOES & BAGS</a></li>
+        </ul>
+    </nav>
+
+
     <!-- cloth section start -->
 
     <div class="container">
@@ -146,7 +232,20 @@
         var header = document.getElementsByClassName("section");
         header.classList.toggle("sticky", window.scrollY > 0)
     })
+    $('.header1').click(function () {
+        $(this).toggleClass("click");
+        $('.sidebar').toggleClass("show");
+    });
+    $('.feat-btn').click(function () {
+        $('nav ul .feat-show').toggleClass("show");
 
+    });
+    $('.serv-btn').click(function () {
+        $('nav ul .serv-show').toggleClass("show1");
+    });
+    $('nav ul li').click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
     // send to next page
 
     var image = document.querySelectorAll(".centerimg")
