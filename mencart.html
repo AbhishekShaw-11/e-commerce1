@@ -44,7 +44,7 @@
             <p><i class="fa-solid fa-bars"></i></p>
         </div>
         <div class="header2">
-            <img src="./image/Zara_Logo.jpg" alt="zara" style="height: 7rem; width: 10rem;">
+            <img src="./image/Zara_Logo.jpg" alt="zara" style="height: 7rem; width: 10rem;" onclick="logo()">
         </div>
 
         <div class="header3">
@@ -269,6 +269,10 @@ function productfinal(event){
     localStorage.setItem("currentItems", JSON.stringify(obj));
     window.location.href="describepro.html"
 
+
+}
+function logo(){
+    window.location.href="index.html";
 }
 </script>
 
