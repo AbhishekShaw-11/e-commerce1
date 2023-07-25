@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Women Cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/cart.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        .section {
+
+            margin-top: 10rem;
+            display: flex;
+            margin-left: 4rem;
+            justify-content: space-between;
+            font-size: .8em;
+            width: 25%;
+            position: fixed;
+        }
+
+        .section p {
+            cursor: pointer;
+        }
+        header:hover{
+            background-color: white;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar section -->
+    <header>
+        <div class="header1">
+            <p><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div class="header2">
+            <img src="./image/Zara_Logo.jpg" alt="zara" style="height: 7rem; width: 10rem;">
+        </div>
+
+        <div class="header3">
+            <input type="search" id="search-bar" placeholder="Search">
+            <p><a href="login.html">Log In</a></p>
+            <p><a href="help.html">Help</a></p>
+        </div>
+        <div class="header4">
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
+        </div>
+    </header>
+    <!-- navbar section end -->
+
+    <div class="section">
+        <p>COLOUR</p>
+        <p>SIZE</p>
+        <p>PRICE</p>
+        <p>COLLECTION</p>
+    </div>
+    <!-- cloth section start -->
+   
+ <div class="container">
+    <div>
+        <div class="containerpro">
+            <div class="img1">
+                <img class="centerimg"
+                src="./image/girl cloth/sample1.jpg"
+                alt="">
+            <p class="new">NEW</p>
+            <P class="cat">Long Dress Black</P>
+            <P class="price">7,990</P>
+            </div>
+            <div class="img1">
+                <img class="centerimg"
+                src="./image/girl cloth/sample2.jpg"
+                alt="">
+            <p class="new">NEW</p>
+            <P class="cat">Midi Dress </P>
+            <P class="price">9,990</P>
+            </div>
+        </div>
+        <div class="containerprod2">
+            <div class="img1">
+
+                <img class="centerimg"
+                    src="image/girl cloth/sample3.jpg"
+                    alt="">
+
+
+                <p class="new">NEW</p>
+                <P class="cat">Jumpsuit</P>
+                <P class="price">4,590</P>
+            </div>
+            <div class="img1">
+                <img class="centerimg"
+                    src="./image/girl cloth/sample4.jpg"
+                    alt="">
+                <p class="new">NEW</p>
+                <P class="cat">Top with Pink Jeans</P>
+                <P class="price">5,999</P>
+            </div>
+        </div>
+        <div class="containerpro">
+            <div class="img1">
+                <img class="centerimg"
+                src="./image/girl cloth/sample5.jpg"
+                alt="">
+            <p class="new">NEW</p>
+            <P class="cat">White Jeans</P>
+            <P class="price">1,999</P>
+            </div>
+            <div class="img1">
+                <img class="centerimg"
+                src="./image/girl cloth/sample6.jpg"
+                alt="">
+            <p class="new">NEW</p>
+            <P class="cat">Blue Denim</P>
+            <P class="price">2,990</P>
+            </div>
+        </div>
+    </div>
+ </div>
+    <!--cloth section end -->
+</body>
+<script>
+    window.addEventListener(scroll, () => {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    })
+    window.addEventListener(scroll, () => {
+        var header = document.getElementsByClassName("section");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    })
+
+
+     // send to next page
+
+     var image = document.querySelectorAll(".centerimg")
+
+for(var i=0; i<image.length; i++){
+ image[i].addEventListener("click", productfinal)   
+}
+
+
+
+function productfinal(event){
+  var img= event.target;
+    img = img.getAttribute("src");
+    
+    var condition = event.target.nextElementSibling;
+    var cat = condition.nextElementSibling;
+    var price = cat.nextElementSibling;
+    var obj = {
+        img : img,
+        cat : cat.textContent,
+        price : price.textContent,
+        Qty : 1,
+
+    }
+    localStorage.setItem("currentItems", JSON.stringify(obj));
+    window.location.href="describepro.html"
+
+}
+</script>
+
+</html>

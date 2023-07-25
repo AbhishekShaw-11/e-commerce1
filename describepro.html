@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./Css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="./Css/footer.css  ">
+</head>
+<style>
+    a {
+        color: black;
+        user-select: none;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 26px;
+        font-stretch: semi-condensed;
+        margin-right: 20px;
+    }
+
+    .container {
+        padding-top: 140px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .centerimgprod {
+
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    .img1 {
+
+        margin: auto;
+        margin-top: 5%;
+        max-width: 350px;
+    }
+
+    .price,
+    .new {
+        margin: 4px;
+        margin-left: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        font-stretch: semi-condensed;
+
+    }
+
+
+
+
+
+    .right,
+    .left {
+
+        margin-top: 70px;
+        width: 230px;
+        height: 320px;
+        padding-top: 100px;
+    }
+
+    .right,
+    .left,
+    h3,
+    p {
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .right span p {
+        display: inline;
+    }
+
+    .right button {
+        background-color: black;
+        color: white;
+        width: 100%;
+        cursor: pointer;
+        height: 30px;
+        margin: 8px 0px;
+    }
+
+    .right select {
+
+        background: transparent;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .right h3 {
+        word-spacing: 2px;
+        line-height: 12px;
+    }
+
+    /* when add to bag click visiblity block */
+    .right button~button {
+        visibility: hidden;
+
+    }
+</style>
+
+<body>
+    <!-- navbar section -->
+    <header>
+        <div class="header1">
+            <p><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div class="header2">
+            <img src="./image/Zara_Logo.jpg" alt="zara" width="90px">
+        </div>
+
+        <div class="header3">
+            <input type="search" id="search-bar" placeholder="Search">
+            <p><a href="login.html">Log In</a></p>
+            <p><a href="help.html">Help</a></p>
+        </div>
+        <div class="header4">
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
+        </div>
+    </header>
+    <!-- navbar section end -->
+
+    <div class="container">
+
+        <div class="left">
+            <h2>MATERIALS, CARE AND ORIGIN</h2>
+            <h3>JOIN LIFE</h3>
+            <p>Care for water produced using iess water.</p><br>
+            <p>
+                We use the Join Life label on clothing that is produced using technology and raw materials that help us
+                to reduced the environment impact of our product.
+            </p><br>
+
+            <h2>MATERIALS</h2>
+            <p>We work with montoring programmes to ensure compliance with safety, health and quality standards for our
+                products.</p><br>
+            <p>The Green to wear 2.0 standard aims to minimise the environment impacr</p>
+            <a href="">
+                <p>View more</p>
+            </a>
+
+        </div>
+        <div class="containerprod">
+            <div class="img1">
+                <img class="centerimgprod" src="./image/baby cloth/babgyd3.2.jpg" alt="">
+
+            </div>
+        </div>
+        <div>
+
+            <div class="right">
+                <h2 class="cat">TEXTURED COTTON TROUSERS</h2>
+                <h3>FADED TROUSERS MADE OF COTTON. ADJUSTABLE WAIST WITH SIDE TABS. FRONT POCKETS AND REAR JETTED
+                    POCKETS. ADJUSTABLE HEM WITH TABS. ZIP FLY A TOP BUTTON FASTENING.</h3><br>
+
+                <span>&#x20b9; <p class="pricetag"></p></span>
+                <p>MRP incl. of all taxes</p>
+                <br>
+                <p>Colour Navy blue | 0647/301</p>
+                <br>
+                <select name="" id="prodsize">
+                    <option value="null">Select your size</option>
+                    <option value="EU 30 (UK 29)">EU 36 (UK 29)</option>
+                    <option value="EU 32 (UK 38)">EU 38 (UK 38)</option>
+                    <option value="EU 36 (UK 40)">EU 40 (UK 40)</option>
+                    <option value="EU 40 (UK 42)">EU 42 (UK 42)</option>
+                    <option value="EU 44 (UK 34)">EU 44 (UK 34)</option>
+                </select>
+
+                <button onclick="addToCart()">Add to bag</button>
+
+                <button onclick="goToProceed()">Process order</button>
+
+                <P>Materials, care and origin Check in-store availability Check in-store availability Delivery, Echange
+                    and Returns. Share</P>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Footer for Zara Help Sections -->
+    <!-- Footer for Zara Help Sections -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="*">SHOP AT ZARA.COM</a></li>
+                        <li><a href="*">PRODUCT</a></li>
+                        <li><a href="*">PAYMENT</a></li>
+                        <li><a href="*">SHIPPING</a></li>
+                        <li><a href="*">EXCHANGES AND RETURNS</a></li>
+                        <li><a href="*">SHOPS AND COMPANY</a></li>
+                        <li><a href="*">CLOTHES COLLECTION PROGRAMME</a></li>
+                        <li><a href="*">MY ACCOUNT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li><a href="*">NEWSLETTER</a></li>
+                        <li><a href="*">TIKTOK</a></li>
+                        <li><a href="*">INSTAGRAM</a></li>
+                        <li><a href="*">FACEBOOK</a></li>
+                        <li><a href="*">TWITTER</a></li>
+                        <li><a href="*">PINTEREST</a></li>
+                        <li><a href="*">YOUTUBE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="*">ABOUT US</a></li>
+                        <li><a href="*">OFFICES</a></li>
+                        <li><a href="*">STORES</a></li>
+                        <li><a href="*">WORK WITH US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>POLICIES</h4>
+                    <ul>
+                        <li><a href="*">PRIVACY POLICY</a></li>
+                        <li><a href="*">PURCHASE CONDITIONS</a></li>
+                        <li><a href="*">COOKIES SETTINGS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr id="line">
+            <div class="divfooter">
+                <div id="div1">
+                    <p>INDIA</p>
+                </div>
+                <div id="div2">
+                    <p>ENGLISH</p>
+                    <br />
+                    <p id="h">© ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <p id="footerdone">NAME AND ADDRESS OF THE MANUFACTURER:<br />INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX,
+                S.A.)<br />AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+    </footer>
+</body>
+<script>
+    window.addEventListener(scroll, () => {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    })
+
+
+
+    var centerimg = document.querySelector(".centerimgprod")
+    // console.log(centerimg)
+    var obj = JSON.parse(localStorage.getItem("currentItems"))
+    // console.log(obj)
+    centerimg.setAttribute("src", obj.img)
+
+
+    var pricex = document.querySelector(".pricetag");
+    pricex.innerHTML = obj.price;
+    var cat = document.querySelector(".cat");
+    cat.textContent = obj.cat;
+
+
+    var centerimg = document.querySelector(".centerimgprod")
+
+    var obj = JSON.parse(localStorage.getItem("currentItems"))
+
+    centerimg.setAttribute("src", obj.img)
+
+
+    var pricex = document.querySelector(".pricetag");
+    pricex.innerHTML = obj.price;
+    var cat = document.querySelector(".cat");
+    cat.textContent = obj.cat;
+
+
+    var cart = JSON.parse(localStorage.getItem("ZaraCart")) || [];
+
+    function addToCart() {
+        var size = document.querySelector("#prodsize").value;
+        var proceed = document.querySelector(".right button~button");
+        var cartobj = {
+            imgURL: obj.img,
+            name: obj.cat,
+            Price: obj.price,
+            size: size,
+            Qty: 1,
+        }
+
+        if (size == "null") {
+            alert("YOU MUST SELECT A SIZE")
+        }
+        else {
+            proceed.style.visibility = "visible";
+            cart.push(cartobj);
+            localStorage.setItem("ZaraCart", JSON.stringify(cart))
+        }
+
+
+        // console.log(proceed)
+
+
+        // console.log(size)
+        // console.log(cart)
+        // document.querySelector("#cartlength").textContent = cart.length
+
+        // console.log(cart)
+
+    }
+
+    function goToProceed() {
+        window.location.href = "checkout.html"
+    }
+</script>
+
+</html>

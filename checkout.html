@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./Css/footer.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./Css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        #main{
+    width:100%;
+    height:120px;
+    background-color: white;
+    color:black;
+    display: flex;
+   position: fixed;
+   top:0;
+   font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
+}
+#main>div{
+    height:100%;
+    width:250px;
+}
+    
+/* }
+#sub{
+    margin-left: 120px;
+    font-size: 100px;
+    line-height:0;
+    letter-spacing:-20px;
+    text-align: justify;
+  
+    
+}*/
+#sub>img{
+   /* border:1px solid black; */
+   margin-top: -100px;
+   margin-left: 100px;
+} 
+#sub1{
+    margin-left: 900px;
+    display: flex;
+    justify-content: space-evenly;
+  font-size: 10px;
+    margin-top: 15px;
+    
+}
+#mainCart{
+    height:390px;
+    width:91%;
+   margin-top:140px;
+  margin-left: 120px;
+  
+}
+#mainbox{
+    height:400px;
+    width:100%;
+    overflow-x: scroll;
+    display: flex;
+  margin-left:-20px;
+
+}
+#bottom{
+    width:400px;
+    height:130px;
+    position:fixed;
+    bottom:0;
+    right: 0;
+}
+#bottom>p{
+   margin-left: 300px;
+   margin-right: 10px;
+   border:0.5px solid grey;
+   display: flex;
+   justify-content: space-around;
+   font-size: 12px;
+   height:15px;
+   padding: 10px;
+   
+}
+#button{
+    height:50px;
+    width:100%;
+    display: flex;
+    margin-top: 0;
+}
+#one{
+    height:100%;
+    width:120px;
+    font-size: 11px;
+   margin-bottom:1rem;
+    line-height: 2px;
+    text-align:end;
+}
+#two{
+    height:100%;
+    width:240px;
+    margin-left: 30px;
+}
+.butt{
+    height:40px;
+    background-color: black;
+    width:100%;
+    color:white;
+    border:0;
+}
+.boxes{
+    height:100%;
+    width:450px;
+    display: flex;
+    font-size: 11px;
+    letter-spacing:0.5px;
+    margin-left: 20px;
+    line-height: 15px;
+}
+.suBox{
+    height:100%;
+    width:150px;
+    padding-left: 20px;
+
+}
+.suBox p{
+    margin-top: 0px;
+    font-weight: bold;
+    font-stretch: ultra-condensed;
+    font-size: 14px;
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;;
+
+    
+}
+.small{
+    height:40px;
+    width:100px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+    margin-left: 5px;
+}
+#item{
+    font-size: 11px;
+    margin-bottom: 40px;
+}
+#links{
+    height:250px;
+    width:800px;
+    display:flex;
+    margin-top:300px;
+    margin-left: 120px;
+    
+}
+#links>div{
+    height:100%;
+    width:150px;
+    padding: 10px;
+}
+#links>div>p{
+  
+   font-size: 9px;
+   
+   font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
+    font-weight:bold;
+   line-height: 12px;
+  /* text-align: center; */
+   font-style: normal;
+
+
+}
+p>a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+button{
+margin-left: 20px;
+margin-top: 5px;
+}
+#links>div>h3{
+    font-size: 13px;
+}
+#mainCart>h2{
+    font-size:22px ;
+    letter-spacing:0;
+}
+#mainCart>p{
+    font-size: 10px;
+}
+
+.deleteicon{
+    background: transparent;
+    border: none;
+}
+    </style>
+</head>
+<body>
+     <!-- navbar section -->
+     <header>
+        <div class="header1">
+            <p><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div class="header2">
+            <img src="./image/Zara_Logo.jpg" alt="zara" width="90px">
+        </div>
+
+        <div class="header3">
+            <input type="search" id="search-bar" placeholder="Search">
+            <p><a href="login.html">Log In</a></p>
+            <p><a href="help.html">Help</a></p>
+        </div>
+        <div class="header4">
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
+        </div>
+    </header>
+    <!-- navbar section end -->
+    <div id="mainCart">
+        <!-- <i class="far fa-trash-alt"></i> -->
+        <h2>SHOPPING BAG</h2>
+        <P id="item">ITEMS</P>
+        <div id="mainbox"></div>
+    </div>
+    <div id="bottom">
+        <P><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chat-right-fill" viewBox="0 0 16 16">
+                <path
+                    d="M14 0a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+            </svg> CHAT</P>
+
+        <div id="button">
+            <div id="one">
+                <h4 style="margin-bottom: 1rem;">TOTAL: <span id="total"></span></h4>
+                <P style="margin-bottom: 1rem;">Including GST</P>
+                <P>*Excl Shopping Cost</P>
+            </div>
+            <div id="two">
+                <button onclick="gotoproceed()" class="butt">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+   
+
+<!-- footer section start -->
+    <footer class="footer" id="footer">
+        <div class="container1">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="*">SHOP AT ZARA.COM</a></li>
+                        <li><a href="*">PRODUCT</a></li>
+                        <li><a href="*">PAYMENT</a></li>
+                        <li><a href="*">SHIPPING</a></li>
+                        <li><a href="*">EXCHANGES AND RETURNS</a></li>
+                        <li><a href="*">SHOPS AND COMPANY</a></li>
+                        <li><a href="*">CLOTHES COLLECTION PROGRAMME</a></li>
+                        <li><a href="*">MY ACCOUNT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li><a href="*">NEWSLETTER</a></li>
+                        <li><a href="*">TIKTOK</a></li>
+                        <li><a href="*">INSTAGRAM</a></li>
+                        <li><a href="*">FACEBOOK</a></li>
+                        <li><a href="*">TWITTER</a></li>
+                        <li><a href="*">PINTEREST</a></li>
+                        <li><a href="*">YOUTUBE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="*">ABOUT US</a></li>
+                        <li><a href="*">OFFICES</a></li>
+                        <li><a href="*">STORES</a></li>
+                        <li><a href="*">WORK WITH US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>POLICIES</h4>
+                    <ul>
+                        <li><a href="*">PRIVACY POLICY</a></li>
+                        <li><a href="*">PURCHASE CONDITIONS</a></li>
+                        <li><a href="*">COOKIES SETTINGS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr id="line">
+            <div class="divfooter">
+                <div id="div1">
+                    <p>INDIA</p>
+                </div>
+                <div id="div2">
+                    <p>ENGLISH</p>
+                    <br />
+                    <p id="h">© ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <p id="footerdone">NAME AND ADDRESS OF THE MANUFACTURER:<br />INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX,
+                S.A.)<br />AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+    </footer>
+</body>
+<script>
+   var cart = JSON.parse(localStorage.getItem("ZaraCart")) || [];
+TotalPrice(cart)
+document.querySelector("#item").textContent = cart.length + "  " + document.querySelector("#item").textContent;
+function Remove(index) {
+    cart.splice(index, 1)
+    localStorage.setItem("ZaraCart", JSON.stringify(cart))
+    displayCart(cart)
+    TotalPrice(cart)
+}
+
+displayCart(cart)
+function displayCart(cart) {
+    
+    document.querySelector("#mainbox").textContent = "";
+    document.querySelector("#item").textContent = "ITEMS"
+    document.querySelector("#item").textContent = cart.length + "  " + document.querySelector("#item").textContent;
+    cart.map(function (elem, index) {
+        var box = document.createElement("div");
+        box.setAttribute("class", "boxes");
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.imgURL);
+        img.setAttribute("width", "250px");
+        img.setAttribute("height", "100%");
+        var sub = document.createElement("div");
+        sub.setAttribute("class", "suBox");
+        var p1 = document.createElement("p");
+        p1.textContent = elem.name;
+        var p2 = document.createElement("p");
+        p2.textContent = elem.color;
+        var p3 = document.createElement("p");
+        p3.textContent = elem.Price;
+        
+        var p4 = document.createElement("p");
+        p4.textContent = elem.size;
+        var small = document.createElement("div");
+        small.setAttribute("class", "small");
+        small.addEventListener("click",function() {
+            ChangeCount(event)
+        })
+        
+        var elem1 = document.createElement("p");
+        elem1.setAttribute("class", "count");
+        elem1.textContent = "-";
+
+        var elem2 = document.createElement("p");
+        elem2.setAttribute("class", "countofItems")
+        elem2.textContent = elem.Qty||1;
+
+        var elem3 = document.createElement("p");
+        elem1.setAttribute("class", "count");
+        elem3.textContent = "+";
+
+
+        small.append(elem1, elem2, elem3);
+        var button = document.createElement("button");
+        button.setAttribute("class","deleteicon")
+        var deleteicon = document.createElement("i");
+        deleteicon.setAttribute("class", "far fa-trash-alt");
+        button.append(deleteicon)
+        // button.textContent = "Remove";
+        button.addEventListener("click", function () {
+            Remove(index)
+        });
+
+
+        sub.append(p1, p2, p3, p4, small, button);
+        box.append(img, sub);
+        document.querySelector("#mainbox").append(box);
+
+       
+
+
+    }
+    )
+
+}
+
+function TotalPrice(cart) {
+    var Total = 0;
+   
+    for (var i = 0; i < cart.length; i++) {
+        var final = 0;
+        var x = cart[i].Price
+        var y = x.split(",");
+        y = y[0] + y[1]
+        final = +cart[i].Qty*(+y)       
+        Total += final;        
+    }
+    
+    document.querySelector("#total").textContent = Total;
+}
+
+
+
+
+
+
+function ChangeCount(event) {
+
+    var first = event.target.textContent;
+
+    if (first == "-") {
+        var sum = event.target.nextElementSibling.textContent;
+        if (sum > 1) {
+            sum--
+        }
+        event.target.nextElementSibling.textContent = sum;
+    }
+    else if (first == "+") {
+
+        var sum = event.target.previousElementSibling.textContent;
+        sum++
+        event.target.previousElementSibling.textContent = sum;
+
+    }
+    normaltest()
+
+}
+
+
+
+function normaltest() {
+    var normal = document.querySelectorAll(".countofItems")
+    for(var i=0; i<normal.length; i++){
+        p = normal[i].textContent
+
+        cart.map(function (elem,index) {
+            if(i==index){
+                elem.Qty = p;
+            }
+            
+        })
+        
+        localStorage.setItem("ZaraCart", JSON.stringify(cart))
+    }
+    TotalPrice(cart)
+    
+    
+}
+
+function gotoproceed() {
+    window.location.href = "billing.html"
+}
+</script>
+</html>

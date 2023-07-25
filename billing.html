@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./Css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        .container {
+            width: 80%;
+            margin-left: 80px;
+        }
+
+        img {
+            margin-left: 80px;
+
+
+        }
+
+        .hd {
+            margin-left: 80px;
+         margin-bottom: 1rem;
+        }
+
+        .rad {
+            margin-left: 100px;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            text-align: left;
+            justify-content: space-around;
+            padding-left: 0px;
+            width: 250px
+        }
+
+        .box1 {
+            height: 500px;
+            width: 80%;
+            margin-left: 80px;
+            /* border: 2px solid red; */
+            display: flex;
+
+        }
+
+        .left {
+            width: 45%;
+            height: 450px;
+            /* border: 2px solid teal; */
+            margin-right: 5%;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .right {
+            width: 45%;
+            height: 450px;
+            /* border: 2px solid rgb(13, 0, 128); */
+            margin-right: 5%;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 10px;
+            margin-bottom: 50px;
+            margin-top: 5px;
+
+
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 10px;
+            margin-bottom: 50px;
+            margin-top: 5px;
+
+        }
+
+        button {
+            width: 180px;
+            height: 45px;
+            color: white;
+            background: black;
+            border-radius: 0px;
+            padding: 10px;
+            margin-left: 6%;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: teal;
+            color: black;
+        }
+
+        input[type=text] {
+            font-size: 15px;
+        }
+
+        input[type=password] {
+            font-size: 15px;
+        }
+
+        input[type=email] {
+            font-size: 15px;
+        }
+
+        input[type=number] {
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar section -->
+    <header>
+        <div class="header1">
+            <p><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div class="header2">
+            <img src="./image/Zara_Logo.jpg" alt="zara" width="90px">
+        </div>
+
+        <div class="header3">
+            <input type="search" id="search-bar" placeholder="Search">
+            <p><a href="login.html">Log In</a></p>
+            <p><a href="help.html">Help</a></p>
+        </div>
+        <div class="header4">
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
+        </div>
+    </header>
+    <!-- navbar section end -->
+
+    <div class="hd">
+        <h2 style="margin-top: 10rem;">PLEASE ENTER THE DELIVERY DETAILS</h2>
+    </div>
+    <div class="rad">
+
+        <input name="personal" type="radio" value="per" />
+        <label>PERSONAL</label>
+        <input name="company" type="radio" value="com" />
+        <label>COMPANY</label>
+    </div>
+    <div class="box1">
+        <div class="left">
+            <label>NAME</label>
+            <br>
+            <input id="name" type="text" placeholder="ENTER NAME">
+            <br>
+            <label>ADDRESS</label>
+            <br>
+            <input id="address" type="text" placeholder="ENTER ADDRESS">
+            <br>
+            <label>LOCALITY</label>
+            <br>
+            <input id="locality" type="text" placeholder="ENTER LOCALITY">
+            <br>
+            <label>STATE</label>
+            <br>
+            <input id="state" type="text" placeholder="-------">
+            <br>
+            <label>EMAIL</label>
+            <input id="email" type="email" placeholder="ENTER EMAIL">
+
+        </div>
+        <div class="right">
+            <label>PINCODE</label>
+            <br>
+            <input id="pincode" type="number" placeholder="PINCODE">
+            <br>
+            <label>PASSWORD</label>
+            <br>
+            <input id="password" type="password" placeholder="password">
+            <br>
+            <label>CITY</label>
+            <br>
+            <input id="city" type="text" placeholder="CITY">
+            <br>
+            <label>REGION</label>
+            <input type="text" value="INDIA">
+            <br>
+            <label>Mobile</label>
+            <br>
+            <input id="mobile" type="number" placeholder="Enter Mobile No.">
+        </div>
+    </div>
+    <button type="button">Proceed to Pay</button>
+    </div>
+</body>
+<script>
+     document.querySelector("button").addEventListener("click", bill);
+var userDetails= JSON.parse(localStorage.getItem("BillingData"))||[];
+    function bill(){
+        var name = document.querySelector("#name").value;
+        var address = document.querySelector("#address").value;
+        var locality = document.querySelector("#locality").value;
+        var state = document.querySelector("#state").value;
+        var email = document.querySelector("#email").value;
+        var pincode = document.querySelector("#pincode").value;
+        var password=document.querySelector("#password").value;
+        var city=document.querySelector("#city").value;
+        var mobile=document.querySelector("#mobile").value;
+
+        var userrecord= {
+            Name:name,
+            address:address,
+            loca:locality,
+            State:state,
+            emailAdd: email,
+            pin:pincode,
+            pass: password,
+            cit: city,
+            mobile: mobile,
+        };
+        userDetails.push(userrecord);
+        console.log(userDetails);
+
+        localStorage.setItem("BillingData", JSON.stringify(userDetails));
+    }
+
+    document.querySelector("button").addEventListener("click", function(){
+        window.location.href="proceed.html"
+    })
+</script>
+</html>
